@@ -5,7 +5,7 @@
 <hibernate-configuration>
   <session-factory>
 
-    <property name="connection.url">jdbc:mysql://localhost:33061/testhibernate?useSSL=false</property>
+    <property name="connection.url">jdbc:mysql://localhost:33061/hibernatetest?useSSL=false&amp;serverTimezone=UTC&amp;allowPublicKeyRetrieval=true</property>
     <property name="connection.username">hibernate</property>
     <property name="connection.password">hibernate</property>
 
@@ -14,10 +14,12 @@
     <property name="show_sql">true</property>
     <property name="hibernate.format_sql">true</property>
 
-    <property name="default_schema">testhibernate</property>
+    <property name="default_schema">hibernatetest</property>
 
     <property name="hibernate.current_session_context_class">thread</property>
 
+    <mapping class="com.ilyastuit.hibernate.basic.entities.Author"/>
+    <mapping class="com.ilyastuit.hibernate.basic.entities.Book"/>
 
   </session-factory>
 </hibernate-configuration>
